@@ -1,8 +1,16 @@
-plugins {
+/*plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    'kotlin-android-extensions'
 }
+*/
+
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'kotlin-android-extensions'
+
 
 android {
     compileSdk 31
@@ -50,6 +58,9 @@ dependencies {
     // Add the dependency for the Firebase SDK for Google Analytics
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    //Autenticacion Firebase
+    implementation 'com.google.firebase:firebase-auth:21.0.3'
 
 
 }
