@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "681106599958",
+    "project_id": "buildingmanagement-e2022",
+    "storage_bucket": "buildingmanagement-e2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681106599958:android:4402b3305b7bb72d520537",
+        "android_client_info": {
+          "package_name": "com.dev.gestionedificios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681106599958-o71gpnl4kdql7ietru5vpbatimvgj6rs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO75dB7ovgVcC7200tZtFXbfUH1AiVYAU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681106599958-o71gpnl4kdql7ietru5vpbatimvgj6rs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
