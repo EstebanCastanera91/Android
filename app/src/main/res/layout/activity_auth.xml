@@ -9,6 +9,7 @@
     tools:visibility="visible">
 
     <LinearLayout
+        android:id="@+id/authLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -57,8 +58,10 @@
                 android:text="REGISTRAR"
                 android:textColor="@android:color/white"
                 android:visibility="visible"
-                tools:visibility="visible" />
+                tools:visibility="visible" /><![CDATA[
             android:text="REGISTRAR" />
+
+            ]]>
 
             <Space
                 android:layout_width="8dp"
@@ -74,6 +77,23 @@
                 android:textColor="@android:color/white" />
 
         </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/googleButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:drawableStart="@mipmap/google"
+            android:paddingStart="16dp"
+            android:text="Google"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorPrimaryDark" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
