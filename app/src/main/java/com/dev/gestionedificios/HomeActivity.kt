@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.crashlytics.FirebaseCrashlytics
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_home.*
 import java.lang.RuntimeException
 
@@ -16,6 +17,9 @@ enum class ProviderType{
 }
 
 class HomeActivity : AppCompatActivity() {
+
+    private  val db = FirebaseFirestore.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -54,8 +58,10 @@ class HomeActivity : AppCompatActivity() {
             onBackPressed()  //Volver a la pantalla anterior
         }
 
+        //<editor-fold desc="Boton para producir Falla">
         //Boton para probar Falla Crashlytics
 
+        /*
         errorButton.setOnClickListener{
 
             //Enviar informacion adicional
@@ -68,7 +74,37 @@ class HomeActivity : AppCompatActivity() {
             //Forzado de error
             throw RuntimeException("Forzado de error")
         }
+        */
+        //</editor-fold>
 
+        //<editor-fold desc="Boton Guardado">
+
+        saveButton.setOnClickListener {
+            db.collection("user").document(email).set(
+                hashMapOf("provider" to provider,
+                    "address" to addressTextView.text.toString(),
+                    "phone" to phoneTextView.text.toString()
+                )
+            )
+        }
+        //</editor-fold>
+
+        //<editor-fold desc="Boton Recuperar">
+
+        getButton.setOnClickListener {
+            db.collection("user").document(email).get().addOnSuccessListener {
+                addressTextView.setText(it.get("address") as String?)
+                phoneTextView.setText(it.get("phone") as String?)
+            }
+        }
+        //</editor-fold>
+
+        //<editor-fold desc="Boton Eliminar">
+
+        deleteButton.setOnClickListener {
+            db.collection("user").document(email).delete()
+        }
+        //</editor-fold>
 
     }
 }

@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_auth.*
 
 
@@ -32,15 +33,15 @@ class AuthActivity : AppCompatActivity() {
         bundle.putString("message","Integracion de Firebase Completa")
         analytics.logEvent("InitScreen", bundle)
 
-        //Setup
 
+        //Setup
         setup()
         session()
 
 
     }
 
-    //Si haces LogOut vuelve a mostrar la pantalla
+    //Si haces LogOut vuelve a mostrar la pantalla Auth
     override fun onStart(){
         super.onStart()
         authLayout.visibility= View.VISIBLE
@@ -113,7 +114,7 @@ class AuthActivity : AppCompatActivity() {
         }
     }
 
-    //Mensaje de alerta si no se puede logiar
+    //Mensaje de alerta si no se puede loguiar
     private fun showAlert(){
          val builder = AlertDialog.Builder(this)
         builder.setTitle("Error")
