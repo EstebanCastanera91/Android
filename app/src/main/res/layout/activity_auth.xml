@@ -58,10 +58,7 @@
                 android:text="REGISTRAR"
                 android:textColor="@android:color/white"
                 android:visibility="visible"
-                tools:visibility="visible" /><![CDATA[
-            android:text="REGISTRAR" />
-
-            ]]>
+                tools:visibility="visible" />
 
             <Space
                 android:layout_width="8dp"
@@ -84,6 +81,7 @@
             android:layout_weight="1"
             />
 
+
         <Button
             android:id="@+id/googleButton"
             android:layout_width="match_parent"
@@ -93,8 +91,10 @@
             android:drawableStart="@mipmap/google"
             android:paddingStart="16dp"
             android:text="Google"
-            android:textAlignment="textStart"
+            android:textAlignment="viewStart"
             android:textColor="@color/colorPrimaryDark" />
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
