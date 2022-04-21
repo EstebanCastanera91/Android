@@ -75,7 +75,8 @@ dependencies {
     //Crashlytics
     implementation 'com.google.firebase:firebase-crashlytics-ktx:18.2.9'
 
-
+    //Bases Datos Firestore
+    implementation 'com.google.firebase:firebase-firestore-ktx:24.1.1'
 
 
 }
