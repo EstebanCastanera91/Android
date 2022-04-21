@@ -7,6 +7,7 @@ import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_home.*
+import java.lang.RuntimeException
 
 enum class ProviderType{
     BASIC,
@@ -49,8 +50,16 @@ class HomeActivity : AppCompatActivity() {
             prefs.apply()
 
             FirebaseAuth.getInstance().signOut()
-            onBackPressed()
-
+            onBackPressed()  //Volver a la pantalla anterior
         }
+
+        //Boton para probar Falla Crashlytics
+        /*
+        errorButton.setOnClickListener{
+            //Forzado de error
+            throw RuntimeException("Forzado de error")
+        }
+         */
+
     }
 }

@@ -11,6 +11,8 @@ apply plugin: 'org.jetbrains.kotlin.android'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android-extensions'
 
+//Aplica el plugin Crashlytics Gradle
+apply plugin: 'com.google.firebase.crashlytics'
 
 android {
     compileSdk 31
@@ -55,6 +57,7 @@ dependencies {
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:29.3.1')
 
+
     // Add the dependency for the Firebase SDK for Google Analytics
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation 'com.google.firebase:firebase-analytics-ktx'
@@ -68,6 +71,11 @@ dependencies {
 
     //Mensajes Push
     implementation 'com.google.firebase:firebase-messaging:23.0.3'
+
+    //Crashlytics
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:18.2.9'
+
+
 
 
 }
