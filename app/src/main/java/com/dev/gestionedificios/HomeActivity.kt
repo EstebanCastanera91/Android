@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import kotlinx.android.synthetic.main.activity_home.*
 import java.lang.RuntimeException
 
@@ -54,12 +55,20 @@ class HomeActivity : AppCompatActivity() {
         }
 
         //Boton para probar Falla Crashlytics
-        /*
+
         errorButton.setOnClickListener{
+
+            //Enviar informacion adicional
+            FirebaseCrashlytics.getInstance().setUserId(email)
+            FirebaseCrashlytics.getInstance().setCustomKey("provider",provider)
+
+            //Enviar log de contexto
+            FirebaseCrashlytics.getInstance().log("Se pulso el boton Forzar Error")
+
             //Forzado de error
             throw RuntimeException("Forzado de error")
         }
-         */
+
 
     }
 }
