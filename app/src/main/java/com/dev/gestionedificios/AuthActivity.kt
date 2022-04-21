@@ -3,10 +3,10 @@ package com.dev.gestionedificios
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_auth.*
 
 
@@ -33,17 +34,19 @@ class AuthActivity : AppCompatActivity() {
         analytics.logEvent("InitScreen", bundle)
 
         //Setup
+
         setup()
         session()
 
 
     }
 
-    //si haces LogOut vuelve a mostrar la pantalla
+    //Si haces LogOut vuelve a mostrar la pantalla
     override fun onStart(){
         super.onStart()
         authLayout.visibility= View.VISIBLE
     }
+
 
     //Comprobar si hay una sesion activa
     private fun session(){
@@ -62,7 +65,7 @@ class AuthActivity : AppCompatActivity() {
     private fun setup(){
         title ="Autenticacion"
 
-        //logica del boton Registrar
+        //Logica del boton Registrar
         signUpButton.setOnClickListener {
             if (emailEditText.text.isNotEmpty()&& passworEditText.text.isNotEmpty())
             {
