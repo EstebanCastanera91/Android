@@ -57,7 +57,7 @@ class AuthActivity : AppCompatActivity() {
         if(email !=null && provider != null) //verificar si ya hay una session activa
         {
             authLayout.visibility= View.INVISIBLE  //Si esta logiado no muestra el authLayout
-            showHome(email, ProviderType.valueOf(provider)) //navegar a Home
+            showHome(email, ProviderType.valueOf(provider)) //navega a Home
         }
 
     }
@@ -128,10 +128,13 @@ class AuthActivity : AppCompatActivity() {
     //Funcion redirige a la pantalla de Home
     private fun showHome(email:String, provider: ProviderType)
     {
-        val homeIntent= Intent(this,HomeActivity::class.java).apply{
+
+            val homeIntent= Intent(this,MainActivity::class.java).apply{
             putExtra("email",email)
             putExtra("provider",provider.name)
         }
+
+
         startActivity(homeIntent)
     }
 
