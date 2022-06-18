@@ -1,2 +1,3 @@
 # Android
-Aplicacion Getsion de Edificio
+Aplicacion Gestion de Consorcios
+
