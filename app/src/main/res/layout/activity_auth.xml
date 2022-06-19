@@ -25,28 +25,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:layout_margin="2dp"
             android:hint="Correo Electrónico"
             android:inputType="textEmailAddress" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
 
         <EditText
             android:id="@+id/passworEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:ems="10"
             android:hint="Contraseña"
             android:inputType="textPassword" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
             android:orientation="horizontal">
 
             <Button
@@ -54,20 +51,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_margin="5dp"
                 android:background="@color/colorPrimary"
                 android:text="REGISTRAR"
                 android:textColor="@android:color/white"
                 android:visibility="visible"
                 tools:visibility="visible" />
 
-            <Space
-                android:layout_width="8dp"
-                android:layout_height="match_parent" />
+
 
             <Button
                 android:id="@+id/loginButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@color/colorPrimaryDark"
                 android:text="ACCEDER"
@@ -75,17 +72,14 @@
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp"
-            android:layout_weight="1"
-            />
+
 
 
         <Button
             android:id="@+id/googleButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="5dp"
             android:layout_weight="1"
             android:background="@android:color/white"
             android:drawableStart="@mipmap/google"

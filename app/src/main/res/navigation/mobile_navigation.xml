@@ -2,8 +2,9 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/mobile_navigation"
+    android:id="@+id/mobile_navigation.xml"
     app:startDestination="@+id/nav_home">
+
 
     <fragment
         android:id="@+id/nav_home"
@@ -14,8 +15,8 @@
 
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.dev.gestionedificios.slideshow.SlideshowFragment"
+        android:id="@+id/nav_unidades"
+        android:name="com.dev.gestionedificios.unidadesshow.UnidadesshowFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_unidadeshow" />
 </navigation>

@@ -1,10 +1,10 @@
-package com.dev.gestionedificios.slideshow
+package com.dev.gestionedificios.unidadesshow
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SlideshowViewModel : ViewModel() {
+class UnidadeshowViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is slideshow Fragment"

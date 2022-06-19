@@ -21,46 +21,43 @@
         <TextView
             android:id="@+id/emailTextView"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
             android:layout_height="30dp"
             android:text="Email" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
+
 
         <TextView
             android:id="@+id/providerTextView"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
             android:layout_height="30dp"
             android:text="Proveeedor" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
+
 
         <EditText
             android:id="@+id/addressTextView"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
             android:layout_height="40dp"
             android:hint="Calle,Numero,Piso,Departamento" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
+
 
         <EditText
             android:id="@+id/phoneTextView"
             android:layout_width="match_parent"
+            android:layout_margin="8dp"
             android:layout_height="40dp"
             android:hint="Telefono" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="8dp"
             android:orientation="horizontal">
 
             <Button
@@ -73,14 +70,12 @@
 
         </LinearLayout>
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="8dp"
-            android:layout_weight="1" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="8dp"
             android:layout_weight="1"
             android:orientation="vertical">
 
@@ -93,14 +88,12 @@
                 android:text="RECUPERAR" />
         </LinearLayout>
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="8dp"
-            android:layout_weight="1" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="8dp"
             android:orientation="vertical">
 
             <Button
@@ -112,14 +105,12 @@
                 android:text="ELIMINAR" />
         </LinearLayout>
 
-        <Space
-            android:layout_width="wrap_content"
-            android:layout_height="8dp"
-            android:layout_weight="1" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="8dp"
             android:orientation="horizontal">
 
             <Button

@@ -1,5 +1,6 @@
 package com.dev.gestionedificios
 
+import android.content.ClipData
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -15,10 +16,19 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.menu.MenuView
+import androidx.navigation.NavController
 import com.dev.gestionedificios.databinding.ActivityMainBinding
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_home.*
 
 class MainActivity : AppCompatActivity() {
-
+    lateinit var googleSignInClient: GoogleSignInClient
+    private lateinit var navController: NavController
+    private val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
+    private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
@@ -41,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_unidades,R.id.authLayout,
             ), drawerLayout
         )
         //Email y Proveedor
@@ -59,15 +69,39 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+
+        navView.setNavigationItemSelectedListener {
+
+            when (it.itemId) {
+                R.id.logOut -> {
+                    googleSignInClient.signOut()
+                    navController.navigate(R.id.authLayout)
+                }
+
+
+            }
+            true
+        }
+
+
+
+
+
+
         //<editor-fold desc="Guardado de datos de login">
 
-        val prefs: SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),
-            Context.MODE_PRIVATE).edit()
-        prefs.putString("email",email)
-        prefs.putString("provider",provider)
-        prefs.apply()
+        //val prefs: SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),
+        //    Context.MODE_PRIVATE).edit()
+        //prefs.putString("email",email)
+        //prefs.putString("provider",provider)
+        //prefs.apply()
         //</editor-fold>
     }
+
+
+
+
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.

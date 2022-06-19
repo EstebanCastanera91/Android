@@ -26,7 +26,7 @@
                     />
 
                 <item
-                    android:id="@+id/signout"
+                    android:id="@+id/logOut"
                     android:title="Cerrar sesion"
                     android:icon="@drawable/ic_baseline_logout_24"
                     />
