@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -39,13 +41,19 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_slideshow
             ), drawerLayout
         )
         //Email y Proveedor
         val bundle:Bundle?= intent.extras
         val email=bundle?.getString("email")
         val provider=bundle?.getString("provider")
+
+        val header_nav_view: View = navView.getHeaderView(0)
+        val email_navView: TextView= header_nav_view.findViewById(R.id.user_mail)
+        val user_navView: TextView= header_nav_view.findViewById(R.id.user_name)
+        email_navView.setText(email)
+        user_navView.setText("Esteban Castañera")
 
 
         setupActionBarWithNavController(navController, appBarConfiguration)
