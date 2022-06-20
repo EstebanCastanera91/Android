@@ -23,4 +23,6 @@
     <string name="nav_user_pass">Contraseña</string>
     <string name="create_new_account">Crear Cuenta Nueva</string>
 
+    <string name="save_profile">Guardar Cambios</string>
+
 </resources>

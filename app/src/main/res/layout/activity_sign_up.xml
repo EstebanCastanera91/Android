@@ -103,7 +103,7 @@
     <EditText
         android:id="@+id/passworEditText"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_border"
         android:ems="16"

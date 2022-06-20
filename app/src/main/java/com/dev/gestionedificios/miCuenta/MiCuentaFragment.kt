@@ -7,9 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.dev.gestionedificios.R
-import com.dev.gestionedificios.databinding.FragmentFacturasBinding
 import com.dev.gestionedificios.databinding.FragmentMiCuentaBinding
-import com.dev.gestionedificios.facturas.FacturasViewModel
 
 class MiCuentaFragment : Fragment() {
 
