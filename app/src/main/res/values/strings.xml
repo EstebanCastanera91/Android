@@ -15,4 +15,12 @@
     <string name="menu_mis_unidades">Mis Unidades</string>
     <string name="name_log_out">Cerrar session</string>
     <string name="menu_mi_cuenta">Mi Cuenta</string>
+
+    <string name="nav_user_firstName">Nombre</string>
+    <string name="nav_user_lastName">Apellido</string>
+    <string name="nav_user_phone">Telefono</string>
+    <string name="nav_user_email">Correo Electronico</string>
+    <string name="nav_user_pass">Contraseña</string>
+    <string name="create_new_account">Crear Cuenta Nueva</string>
+
 </resources>
