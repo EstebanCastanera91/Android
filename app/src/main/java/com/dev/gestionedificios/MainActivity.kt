@@ -20,6 +20,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.fragment_mi_cuenta.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var googleSignInClient: GoogleSignInClient
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         val user_navView: TextView= header_nav_view.findViewById(R.id.user_name)
         email_navView.setText(email)
         user_navView.setText("Esteban Castañera")
+
 
 
         setupActionBarWithNavController(navController, appBarConfiguration)

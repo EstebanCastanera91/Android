@@ -92,12 +92,13 @@ class HomeActivity : AppCompatActivity() {
 
         //<editor-fold desc="Boton Recuperar">
 
-        getButton.setOnClickListener {
+        //getButton.setOnClickListener {
             db.collection("user").document(email).get().addOnSuccessListener {
                 addressTextView.setText(it.get("address") as String?)
                 phoneTextView.setText(it.get("phone") as String?)
+
             }
-        }
+        //}
         //</editor-fold>
 
         //<editor-fold desc="Boton Eliminar">
