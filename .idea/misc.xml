@@ -13,11 +13,15 @@
         <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/activity_main.xml" value="0.18697916666666667" />
         <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/app_bar_main.xml" value="0.23489583333333333" />
         <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/content_main.xml" value="0.23489583333333333" />
-        <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/fragment_home.xml" value="0.23489583333333333" />
+        <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/facturas_fragment.xml" value="0.2625" />
+        <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/fragment_mi_cuenta.xml" value="0.1478494623655914" />
+        <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/fragment_misunidades.xml" value="0.1" />
         <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/fragment_slideshow.xml" value="0.23489583333333333" />
+        <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/fragment_unidadeshow.xml" value="0.1" />
         <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/layout/nav_header_main.xml" value="0.25" />
         <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/menu/activity_main_drawer.xml" value="0.23489583333333333" />
-        <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/menu/main.xml" value="0.23489583333333333" />
+        <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/menu/main.xml" value="0.22" />
         <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3525" />
         <entry key="..\:/Esteban/ISTEA/2022-01-Primer cuatri/Tecnicas avanzadas de programacion/GestionEdificios/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3525" />
       </map>

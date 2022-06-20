@@ -1,13 +1,12 @@
-package com.dev.gestionedificios.home
+package com.dev.gestionedificios.facturas
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class HomeViewModel : ViewModel() {
-
+class FacturasViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
-        value = "Home"
+        value = "Facturas"
     }
     val text: LiveData<String> = _text
 }

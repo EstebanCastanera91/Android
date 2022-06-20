@@ -11,6 +11,8 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Aviso de Pagos</string>
-    <string name="menu_slideshow">Mis Unidades</string>
+    <string name="menu_facturas">Facturas</string>
+    <string name="menu_mis_unidades">Mis Unidades</string>
+    <string name="name_log_out">Cerrar session</string>
+    <string name="menu_mi_cuenta">Mi Cuenta</string>
 </resources>

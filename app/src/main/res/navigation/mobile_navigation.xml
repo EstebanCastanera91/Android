@@ -5,8 +5,7 @@
     android:id="@+id/mobile_navigation.xml"
     app:startDestination="@+id/nav_home">
 
-
-    <fragment
+        <fragment
         android:id="@+id/nav_home"
         android:name="com.dev.gestionedificios.home.HomeFragment"
         android:label="@string/menu_home"
@@ -15,8 +14,20 @@
 
 
     <fragment
-        android:id="@+id/nav_unidades"
-        android:name="com.dev.gestionedificios.unidadesshow.UnidadesshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_unidadeshow" />
+        android:id="@+id/nav_misUnidades"
+        android:name="com.dev.gestionedificios.misUnidades.MisUnidadesFragment"
+        android:label="@string/menu_mis_unidades"
+        tools:layout="@layout/fragment_misunidades" />
+
+    <fragment
+        android:id="@+id/nav_facturas"
+        android:name="com.dev.gestionedificios.facturas.FacturasFragment"
+        android:label="@string/menu_facturas"
+        tools:layout="@layout/fragment_facturas" />
+
+    <fragment
+        android:id="@+id/nav_myAccount"
+        android:name="com.dev.gestionedificios.miCuenta.MiCuentaFragment"
+        android:label="@string/menu_mi_cuenta"
+        tools:layout="@layout/fragment_mi_cuenta" />
 </navigation>
