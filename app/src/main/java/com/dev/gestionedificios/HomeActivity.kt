@@ -11,10 +11,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_home.*
 import java.lang.RuntimeException
 
-enum class ProviderType{
-    BASIC,
-    GOOGLE
-}
+
 
 class HomeActivity : AppCompatActivity() {
 
@@ -31,7 +28,7 @@ class HomeActivity : AppCompatActivity() {
         val provider=bundle?.getString("provider")
         setup(email?:"",provider?:"")
 
-        //<editor-fold desc="Guardado de datos de login">
+        //<editor-fold desc="Guardado de datos de Login">
 
         val prefs:SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),Context.MODE_PRIVATE).edit()
         prefs.putString("email",email)

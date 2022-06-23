@@ -88,7 +88,7 @@
         app:layout_constraintTop_toBottomOf="@+id/user_lastname" />
 
     <EditText
-        android:id="@+id/user_mail"
+        android:id="@+id/email_EditText"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
@@ -101,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/user_phone" />
 
     <EditText
-        android:id="@+id/passworEditText"
+        android:id="@+id/password_EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -111,7 +111,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_mail" />
+        app:layout_constraintTop_toBottomOf="@+id/email_EditText" />
 
     <Button
         android:id="@+id/signUpButton"

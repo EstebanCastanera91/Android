@@ -22,6 +22,12 @@ import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.fragment_mi_cuenta.*
 
+enum class ProviderType{
+    BASIC,
+    GOOGLE
+}
+
+
 class MainActivity : AppCompatActivity() {
     lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var navController: NavController
@@ -95,7 +101,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        //<editor-fold desc="Guardado de datos de login">
+        //<editor-fold desc="Guardado de datos de Login">
 
         //val prefs: SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),
         //    Context.MODE_PRIVATE).edit()

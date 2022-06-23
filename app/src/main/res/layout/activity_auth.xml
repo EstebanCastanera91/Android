@@ -19,7 +19,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
+        <!--
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
@@ -37,7 +37,7 @@
             android:ems="10"
             android:hint="Contraseña"
             android:inputType="textPassword" />
-
+            -->
 
 
         <LinearLayout
@@ -61,7 +61,7 @@
 
 
             <Button
-                android:id="@+id/loginButton"
+                android:id="@+id/accederButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -74,7 +74,7 @@
 
 
 
-
+        <!--
         <Button
             android:id="@+id/googleButton"
             android:layout_width="match_parent"
@@ -88,7 +88,7 @@
             android:textAlignment="viewStart"
             android:textColor="@color/colorPrimaryDark" />
 
-
+        -->
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
