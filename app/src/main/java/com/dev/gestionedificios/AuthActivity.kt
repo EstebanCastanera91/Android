@@ -26,7 +26,6 @@ class AuthActivity : AppCompatActivity() {
 
         //Setup
         setup()
-        //session()
 
 
     }
@@ -37,28 +36,17 @@ class AuthActivity : AppCompatActivity() {
         authLayout.visibility= View.VISIBLE
     }
 
-/*
-    //Comprobar si hay una sesion activa
-    private fun session(){
-        val prefs: SharedPreferences= getSharedPreferences(getString(R.string.prefs_file),Context.MODE_PRIVATE)
-        val email:String? =prefs.getString("email",null)
-        val provider:String? = prefs.getString("provider",null)
 
-        if(email !=null && provider != null) //verificar si ya hay una session activa
-        {
-            authLayout.visibility= View.INVISIBLE  //Si esta logiado no muestra el authLayout
-            showHome(email, ProviderType.valueOf(provider)) //navega a Home
-        }
-
-    }
-    */
 
 
     private fun setup(){
         title ="Autenticacion"
-        /*
+
         //Logica del boton Registrar
         signUpButton.setOnClickListener {
+            val homeIntent= Intent(this,Sign_up::class.java)
+            startActivity(homeIntent)
+            /*
             if (emailEditText.text.isNotEmpty()&& passworEditText.text.isNotEmpty())
             {
                 FirebaseAuth.getInstance()
@@ -72,8 +60,10 @@ class AuthActivity : AppCompatActivity() {
                         }
                     }
             }
+             */
+
         }
-        */
+
         //Logica del boton acceder
         accederButton.setOnClickListener {
 
@@ -117,7 +107,7 @@ class AuthActivity : AppCompatActivity() {
     }
 
 
-
+/*
     //Mensaje de alerta si no se puede loguiar
     private fun showAlert(){
          val builder = AlertDialog.Builder(this)
@@ -127,7 +117,7 @@ class AuthActivity : AppCompatActivity() {
         val dialog: AlertDialog= builder.create()
         dialog.show()
     }
-
+*/
 
     //Funcion redirige a la pantalla de Home
     /*

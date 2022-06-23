@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:visibility="visible"
-    tools:context=".sign_up"
+    tools:context=".Sign_up"
     tools:visibility="visible">
 
     <TextView
@@ -42,8 +42,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_camera"
         app:fabSize="mini"
-        tools:layout_editor_absoluteX="228dp"
-        tools:layout_editor_absoluteY="179dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/ciAvatar"
+        app:layout_constraintEnd_toEndOf="@+id/ciAvatar" />
 
 
 
@@ -114,7 +114,7 @@
         app:layout_constraintTop_toBottomOf="@+id/email_EditText" />
 
     <Button
-        android:id="@+id/signUpButton"
+        android:id="@+id/signUpButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -122,12 +122,11 @@
         android:ems="20"
         android:text="REGISTRAR"
         android:textColor="@android:color/white"
-        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passworEditText"
+        app:layout_constraintTop_toBottomOf="@+id/password_EditText"
         app:layout_constraintVertical_bias="0.176"
         tools:visibility="visible" />
 

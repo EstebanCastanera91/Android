@@ -26,13 +26,9 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-
-
-
-
         //Setup
-       setup()
-      session()
+        setup()
+        session()
     }
 
 

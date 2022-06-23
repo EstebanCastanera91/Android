@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gestionedificios">
         <activity
-            android:name=".sign_up"
+            android:name=".Sign_up"
             android:exported="false" />
         <activity
             android:name=".Login"

@@ -68,6 +68,19 @@ class MainActivity : AppCompatActivity() {
         val header_nav_view: View = navView.getHeaderView(0)
         val email_navView: TextView= header_nav_view.findViewById(R.id.user_mail)
         val user_navView: TextView= header_nav_view.findViewById(R.id.user_name)
+
+
+        /*
+        val ref = email?.let { db.collection("user").document(it) }
+        if (ref != null) {
+            ref.get().addOnSuccessListener {
+                firstNameView.text = it.get("firstName") as String
+                lastNameView.text = it.get("lastName") as String
+            }
+        }
+
+         */
+
         email_navView.setText(email)
         user_navView.setText("Esteban Castañera")
 

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import com.dev.gestionedificios.databinding.FragmentMiCuentaBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -35,18 +36,32 @@ class MiCuentaFragment : Fragment() {
         val emailUserView: TextView= binding.userMail
         val phoneUserView: TextView= binding.userPhone
 
+
         val ref = db.collection("user").document("pepe@gmail.com")
         ref.get().addOnSuccessListener {
 
+            if (phoneUserView != null) {
+                phoneUserView.text = it.get("phone") as String
+            }
+            else{phoneUserView.text=""}
+
+            if (firstNameView != null) {
+                firstNameView.text = it.get("firstName") as String
+            }
+            else{firstNameView.text=""}
+
+            if (lastNameView != null) {
+                lastNameView.text = it.get("lastName") as String
+            }
+            else{lastNameView.text=""}
+
+            if (emailUserView != null) {
+                emailUserView.text = it.get("email") as String
+            }
+            else{emailUserView.text=""}
 
 
-            phoneUserView.text =it.get("phone") as String
-            firstNameView.text=it.get("firstName") as String
-            lastNameView.text=it.get("lastName") as String
-            //emailUserView.text=it.get("email") as String
         }
-
-
         return root
     }
 
@@ -54,5 +69,6 @@ class MiCuentaFragment : Fragment() {
         super.onDestroyView()
         _binding=null
     }
+
 
 }
