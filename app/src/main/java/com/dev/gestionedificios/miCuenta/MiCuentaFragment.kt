@@ -37,7 +37,7 @@ class MiCuentaFragment : Fragment() {
         val phoneUserView: TextView= binding.userPhone
 
 
-        val ref = db.collection("user").document("pepe@gmail.com")
+        val ref = db.collection("users").document(mAuth.currentUser!!.uid)
         ref.get().addOnSuccessListener {
 
             if (phoneUserView != null) {
