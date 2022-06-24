@@ -57,7 +57,7 @@
         android:layout_margin="5dp"
         android:layout_marginTop="68dp"
         android:layout_weight="1"
-        android:background="@drawable/sign_up_button_selector"
+        android:background="@drawable/sign_up_button_selector2"
         android:text="ACCEDER"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"

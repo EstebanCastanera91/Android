@@ -55,8 +55,6 @@ class Login : AppCompatActivity() {
         //Logica del boton acceder
         loginButton.setOnClickListener {
 
-
-
              if (emailEditText.text.isNotEmpty()&& passwordEditText.text.isNotEmpty())
              {
                  FirebaseAuth.getInstance()
@@ -70,8 +68,6 @@ class Login : AppCompatActivity() {
                          }
                      }
              }
-
-
         }
 
 
