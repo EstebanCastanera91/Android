@@ -20,6 +20,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_mi_cuenta.*
 import kotlinx.android.synthetic.main.nav_header_main.*
 
@@ -87,52 +88,68 @@ class MainActivity : AppCompatActivity() {
 
         navView.setupWithNavController(navController)
 
-        /*
-         navView.setNavigationItemSelectedListener {
-                it.isChecked
-                drawerLayout.closeDrawers()
-                when (it.itemId) {
-                    R.id.logOut-> {
-                        googleSignInClient.signOut()
-                        navController.navigate(R.id.authLayout)
-                   }
-                }
-                true
-            }
+
+logOut_button1.setOnClickListener {
+
+    //Borrado de datos al cerrar sesion
+
+    val prefs:SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),Context.MODE_PRIVATE).edit()
+    prefs.clear()
+    prefs.apply()
+
+    FirebaseAuth.getInstance().signOut()
+    onBackPressed()  //Volver a la pantalla anterior
+}
+
+/*
+ navView.setNavigationItemSelectedListener {
+        it.isChecked
+        drawerLayout.closeDrawers()
+        when (it.itemId) {
+            R.id.logOut-> {
+                googleSignInClient.signOut()
+                navController.navigate(R.id.authLayout)
+           }
         }
-
-         */
-
-
-
-
-
-
-
-
-        //<editor-fold desc="Guardado de datos de Login">
-
-        //val prefs: SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),
-        //    Context.MODE_PRIVATE).edit()
-        //prefs.putString("email",email)
-        //prefs.putString("provider",provider)
-        //prefs.apply()
-        //</editor-fold>
+        true
     }
 
+ */
+
+}
 
 
 
 
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
+
+
+
+
+//<editor-fold desc="Guardado de datos de Login">
+
+//val prefs: SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),
+//    Context.MODE_PRIVATE).edit()
+//prefs.putString("email",email)
+//prefs.putString("provider",provider)
+//prefs.apply()
+//</editor-fold>
+
+
+
+
+
+
+
+override fun onCreateOptionsMenu(menu: Menu): Boolean {
+// Inflate the menu; this adds items to the action bar if it is present.
+menuInflater.inflate(R.menu.main, menu)
+return true
+}
+
+override fun onSupportNavigateUp(): Boolean {
+val navController = findNavController(R.id.nav_host_fragment_content_main)
+return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+}
 }

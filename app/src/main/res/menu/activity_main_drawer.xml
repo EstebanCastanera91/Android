@@ -26,12 +26,13 @@
                     android:icon="@drawable/ic_baseline_admin_panel_settings_24"
                     />
 
-                 <!--<item
+
+                 <item
                     android:id="@+id/logOut"
                     android:title="Cerrar sesion"
                     android:icon="@drawable/ic_baseline_logout_24"
                     />
-                    -->
+
 
 
             </menu>

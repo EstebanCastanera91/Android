@@ -2,15 +2,19 @@ package com.dev.gestionedificios.miCuenta
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import com.dev.gestionedificios.R
 import com.dev.gestionedificios.databinding.FragmentMiCuentaBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.fragment_mi_cuenta.*
 
 class MiCuentaFragment : Fragment() {
@@ -36,6 +40,12 @@ class MiCuentaFragment : Fragment() {
         val emailUserView: TextView= binding.userMail
         val phoneUserView: TextView= binding.userPhone
 
+
+        val button_save:Button=root.findViewById(R.id.save_profile)
+
+        button_save.setOnClickListener(){
+            Log.d("Click","se guardo")
+        }
 
         val ref = db.collection("users").document(mAuth.currentUser!!.uid)
         ref.get().addOnSuccessListener {
