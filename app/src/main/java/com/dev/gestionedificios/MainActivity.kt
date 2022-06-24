@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.fragment_mi_cuenta.*
+import kotlinx.android.synthetic.main.nav_header_main.*
 
 enum class ProviderType{
     BASIC,
@@ -63,26 +64,21 @@ class MainActivity : AppCompatActivity() {
         //Email y Proveedor
         val bundle:Bundle?= intent.extras
         val email=bundle?.getString("email")
-        val provider=bundle?.getString("provider")
+
+
+
 
         val header_nav_view: View = navView.getHeaderView(0)
         val email_navView: TextView= header_nav_view.findViewById(R.id.user_mail)
         val user_navView: TextView= header_nav_view.findViewById(R.id.user_name)
-
-
-        /*
-        val ref = email?.let { db.collection("user").document(it) }
-        if (ref != null) {
-            ref.get().addOnSuccessListener {
-                firstNameView.text = it.get("firstName") as String
-                lastNameView.text = it.get("lastName") as String
+        val ref = db.collection("users").document(mAuth.currentUser!!.uid)
+        ref.get().addOnSuccessListener {
+            user_navView.text = it.get("firstName") as String
+            user_navView.append(" ")
+            user_navView.append(it.get("lastName") as String)
             }
-        }
-
-         */
 
         email_navView.setText(email)
-        user_navView.setText("Esteban Castañera")
 
 
 

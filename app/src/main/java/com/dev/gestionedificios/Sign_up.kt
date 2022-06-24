@@ -114,23 +114,7 @@ class Sign_up : AppCompatActivity() {
 
             )
         )
-                                /*.set(items)
-                        .addOnSuccessListener {
 
-
-                   val userModel = UserModel()
-                   userModel.userID = user.uid
-                   userModel.email = items["email"].toString()
-                   userModel.firstName = items["firstName"].toString()
-                   userModel.lastName = items["lastName"].toString()
-                   userModel.userName = items["userName"].toString()
-                   userModel.profilePictureURL = items["profilePictureURL"].toString()
-                   userModel.active = true
-                   currentUser = userModel
-                }.addOnFailureListener {
-                   showAlert("No se registro correctamente")
-
-                    */
 
 
 

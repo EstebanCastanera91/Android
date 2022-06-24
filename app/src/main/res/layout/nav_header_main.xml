@@ -35,6 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView_user"/>
 
+
     <TextView
         android:id="@+id/user_mail"
         android:layout_width="match_parent"
