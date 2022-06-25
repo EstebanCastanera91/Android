@@ -28,11 +28,7 @@ class MisUnidadesFragment : Fragment() {
         _binding = FragmentMisunidadesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textMisUnidades
-        misUnidadesViewModel.text.observe(viewLifecycleOwner)
-        {
-            textView.text =it
-        }
+
 
 
         return root
