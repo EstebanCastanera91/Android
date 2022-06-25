@@ -2,6 +2,7 @@ package com.dev.gestionedificios
 
 import android.content.ClipData
 import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
@@ -18,6 +19,7 @@ import androidx.navigation.ui.*
 import com.dev.gestionedificios.databinding.ActivityMainBinding
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -95,12 +97,20 @@ logOut_button1.setOnClickListener {
 
     //Borrado de datos al cerrar sesion
 
-    val prefs:SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),Context.MODE_PRIVATE).edit()
-    prefs.clear()
-    prefs.apply()
+     val user=mAuth.currentUser
 
-    FirebaseAuth.getInstance().signOut()
-    onBackPressed()  //Volver a la pantalla anterior
+        val prefs: SharedPreferences.Editor =
+            getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+        prefs.clear()
+        prefs.apply()
+        mAuth.signOut()
+        val homeIntent= Intent(this,AuthActivity::class.java)
+        startActivity(homeIntent)
+
+
+
+
+
 }
 
 
