@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:visibility="visible"
     android:id="@+id/authLayout"
+    android:background="@color/background"
     tools:context=".AuthActivity"
     tools:visibility="visible">
 

@@ -47,7 +47,7 @@ class MiCuentaFragment : Fragment() {
         button_save.setOnClickListener(){
             val user_auth:String=mAuth.currentUser!!.uid
 
-            db.collection("users").document(mAuth.currentUser!!.uid).set(
+            db.collection("users").document(user_auth).set(
                 hashMapOf(
                     "email" to user_mail_miCuenta.text.toString(),
                     "firstName" to user_first_name_miCuenta.text.toString(),
@@ -58,7 +58,7 @@ class MiCuentaFragment : Fragment() {
             )
 
 
-            Log.d("Click",user_auth)
+            //Log.d("Click",user_auth)
         }
 
         val ref = db.collection("users").document(mAuth.currentUser!!.uid)
