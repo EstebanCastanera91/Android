@@ -20,6 +20,7 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:theme="@style/SplashTheme"
             android:name=".AuthActivity"
             android:exported="true">
             <intent-filter>

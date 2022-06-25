@@ -13,8 +13,12 @@ class AuthActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Thread.sleep(1000)
+        setTheme(R.style.SplashTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
+        //
+
 
         //Eventos Personalizados de Analytics
         val analytics = FirebaseAnalytics.getInstance(this)
@@ -28,6 +32,8 @@ class AuthActivity : AppCompatActivity() {
 
 
     }
+
+
 
     //Si haces LogOut vuelve a mostrar la pantalla Auth
     override fun onStart() {
