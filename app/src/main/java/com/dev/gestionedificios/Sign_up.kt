@@ -5,21 +5,16 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_auth.*
-import kotlinx.android.synthetic.main.activity_auth.signUpButton
-import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class Sign_up : AppCompatActivity() {
-    companion object {
-        var currentUser: UserModel? = null
-    }
+
     private val auth = FirebaseAuth.getInstance()
     private  val db = FirebaseFirestore.getInstance()
 
@@ -59,22 +54,6 @@ class Sign_up : AppCompatActivity() {
                         {
 
                             createUserWithoutImage()
-                            /*
-                            db.collection("user").document("nicolas@gmail.com").set(
-                                hashMapOf(
-                                    "email" to email_EditText.text.toString(),
-                                    "address" to addressTextView.text.toString(),
-                                    "phone" to phoneTextView.text.toString(),
-                                    "firstName" to user_first_name.text.toString(),
-                                    "lastName" to user_lastname.text.toString(),
-                                    "provider" to ProviderType.BASIC,
-                                )
-                                )
-
-                             */
-
-
-
 
                             showHome(it.result?.user?.email?:"", ProviderType.BASIC)
                         }else{

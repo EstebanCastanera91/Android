@@ -1,6 +1,5 @@
 package com.dev.gestionedificios
 
-import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -13,18 +12,11 @@ import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.view.menu.MenuView
-import androidx.navigation.NavController
 import androidx.navigation.ui.*
 import com.dev.gestionedificios.databinding.ActivityMainBinding
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_mi_cuenta.*
-import kotlinx.android.synthetic.main.nav_header_main.*
 
 enum class ProviderType{
     BASIC,
@@ -33,8 +25,6 @@ enum class ProviderType{
 
 
 class MainActivity : AppCompatActivity() {
-    lateinit var googleSignInClient: GoogleSignInClient
-    private lateinit var navController: NavController
     private val mAuth: FirebaseAuth = FirebaseAuth.getInstance()
     private val db: FirebaseFirestore = FirebaseFirestore.getInstance()
     private lateinit var appBarConfiguration: AppBarConfiguration
@@ -55,8 +45,7 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
 
 
         appBarConfiguration = AppBarConfiguration(

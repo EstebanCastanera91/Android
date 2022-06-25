@@ -66,23 +66,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
-    <Button
-        android:id="@+id/googleButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:layout_marginTop="163dp"
-        android:layout_weight="1"
-        android:background="@drawable/rounded_border"
-        android:drawableStart="@mipmap/google"
-        android:paddingStart="16dp"
-        android:text="Ingresar con Google"
-        android:textAlignment="viewStart"
-        android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="101dp" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
