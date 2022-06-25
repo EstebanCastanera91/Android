@@ -83,6 +83,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+
         setupActionBarWithNavController(navController, appBarConfiguration)
 
 
@@ -101,20 +103,6 @@ logOut_button1.setOnClickListener {
     onBackPressed()  //Volver a la pantalla anterior
 }
 
-/*
- navView.setNavigationItemSelectedListener {
-        it.isChecked
-        drawerLayout.closeDrawers()
-        when (it.itemId) {
-            R.id.logOut-> {
-                googleSignInClient.signOut()
-                navController.navigate(R.id.authLayout)
-           }
-        }
-        true
-    }
-
- */
 
 }
 
@@ -125,16 +113,6 @@ logOut_button1.setOnClickListener {
 
 
 
-
-
-//<editor-fold desc="Guardado de datos de Login">
-
-//val prefs: SharedPreferences.Editor =getSharedPreferences(getString(R.string.prefs_file),
-//    Context.MODE_PRIVATE).edit()
-//prefs.putString("email",email)
-//prefs.putString("provider",provider)
-//prefs.apply()
-//</editor-fold>
 
 
 

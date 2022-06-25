@@ -15,6 +15,7 @@ import com.dev.gestionedificios.databinding.FragmentMiCuentaBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_sign_up.*
 import kotlinx.android.synthetic.main.fragment_mi_cuenta.*
 
 class MiCuentaFragment : Fragment() {
@@ -35,16 +36,29 @@ class MiCuentaFragment : Fragment() {
         _binding= FragmentMiCuentaBinding.inflate(inflater,container,false)
         val root :View= binding.root
 
-        val firstNameView: TextView = binding.userFirstName
-        val lastNameView: TextView= binding.userLastname
-        val emailUserView: TextView= binding.userMail
-        val phoneUserView: TextView= binding.userPhone
+        val firstNameView: TextView = root.findViewById(R.id.user_first_name_miCuenta)
+        val lastNameView: TextView= root.findViewById(R.id.user_lastname_miCuenta)
+        val emailUserView: TextView= root.findViewById(R.id.user_mail_miCuenta)
+        val phoneUserView: TextView= root.findViewById(R.id.user_phone_miCuenta)
 
 
-        val button_save:Button=root.findViewById(R.id.save_profile)
+        val button_save:Button=root.findViewById(R.id.save_profile_miCuenta)
 
         button_save.setOnClickListener(){
-            Log.d("Click","se guardo")
+            val user_auth:String=mAuth.currentUser!!.uid
+
+            db.collection("users").document(mAuth.currentUser!!.uid).set(
+                hashMapOf(
+                    "email" to user_mail_miCuenta.text.toString(),
+                    "firstName" to user_first_name_miCuenta.text.toString(),
+                    "lastName" to user_lastname_miCuenta.text.toString(),
+                    "phone" to user_phone_miCuenta.text.toString(),
+                    "profilePictureURL" to ""
+                )
+            )
+
+
+            Log.d("Click",user_auth)
         }
 
         val ref = db.collection("users").document(mAuth.currentUser!!.uid)

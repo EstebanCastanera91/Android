@@ -49,7 +49,7 @@
 
 
         <EditText
-            android:id="@+id/user_first_name"
+            android:id="@+id/user_first_name_miCuenta"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
@@ -63,7 +63,7 @@
 
 
         <EditText
-            android:id="@+id/user_lastname"
+            android:id="@+id/user_lastname_miCuenta"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
@@ -73,10 +73,10 @@
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_first_name" />
+            app:layout_constraintTop_toBottomOf="@+id/user_first_name_miCuenta" />
 
         <EditText
-            android:id="@+id/user_phone"
+            android:id="@+id/user_phone_miCuenta"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="10dp"
@@ -86,10 +86,10 @@
             android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_lastname" />
+            app:layout_constraintTop_toBottomOf="@+id/user_lastname_miCuenta" />
 
     <TextView
-        android:id="@+id/user_mail"
+        android:id="@+id/user_mail_miCuenta"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="10dp"
@@ -99,12 +99,12 @@
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_phone" />
+        app:layout_constraintTop_toBottomOf="@+id/user_phone_miCuenta" />
 
 
 
         <Button
-            android:id="@+id/save_profile"
+            android:id="@+id/save_profile_miCuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -117,7 +117,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.542"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/user_mail"
+            app:layout_constraintTop_toBottomOf="@+id/user_mail_miCuenta"
             app:layout_constraintVertical_bias="0.176"
             tools:visibility="visible" />
 
