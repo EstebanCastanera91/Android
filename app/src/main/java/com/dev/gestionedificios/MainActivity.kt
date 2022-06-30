@@ -93,7 +93,7 @@ logOut_button1.setOnClickListener {
         prefs.clear()
         prefs.apply()
         mAuth.signOut()
-        val homeIntent= Intent(this,AuthActivity::class.java)
+        val homeIntent= Intent(this,AuthActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP )
         startActivity(homeIntent)
 
 
